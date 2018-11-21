@@ -4,8 +4,8 @@ function takeANumber(line, next) {
   return (`Welcome, ${next}. You are number ${line.length} in line.`)
 }
 
-function nowServing(line) {
 
+function nowServing(line) {
 if (line.length > 0) {
   var current = line[0]
   line.shift()
@@ -13,6 +13,7 @@ if (line.length > 0) {
   else {
   return "There is nobody waiting to be served!"}
 }
+
 
 function currentLine(line) {
 var string = "The line is currently: "
