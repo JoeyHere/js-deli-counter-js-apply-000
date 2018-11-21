@@ -1,14 +1,18 @@
 
-function takeANumber(line, next) {
-  line.push(next);
-  return (`Welcome, ${next}. You are number ${line.length} in line.`)
+var current = 1
+
+function takeANumber(line) {
+ 
+  line.push(current);
+  console.log (`Your ticket number is ${current}`)
+  current = current+1
 }
 
 
 function nowServing(line) {
 if (line.length > 0) {
-  var current = line.shift()
-  return `Currently serving ${current}.`}
+  var currentTicket = line.shift()
+  return `Currently serving ${currentTicket}.`}
   else {
   return "There is nobody waiting to be served!"}
 }
@@ -18,7 +22,7 @@ function currentLine(line) {
 var string = "The line is currently: "
 
 for (var i = 0; i<line.length; i++)  {
-  string = string + `${i+1}. ${line[i]}, `
+  string = string + `${line[i]}, `
 }
 
 if (line.length === 0){
